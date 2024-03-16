@@ -1,14 +1,14 @@
-import React from 'react'
-import moment from 'moment'
+import React from 'react';
+import moment from 'moment';
 
-const WeatherCard = ({ date, temp, min, max }) => {
+const WeatherCard = ({ cityName, temp }) => {
     return (
-        <div className='card'>
-            <div>{moment(date).format("dddd ha")}</div>
-            <h1>{temp}C</h1>
-            <h1>{min}C - {max}C</h1>
+        <div className='card bg-blue mt-24 py-2 px-24 border text-white text-center rounded-lg py-5'>
+            <div>{cityName}</div>
+            <div>{moment().format("MMM Do YY")}</div>
+            <h1>{temp} °C</h1>
         </div>
     )
 }
 
-export default WeatherCard
+export default WeatherCard;

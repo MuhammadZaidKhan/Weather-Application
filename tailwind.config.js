@@ -7,8 +7,8 @@ module.exports = {
     extend: {
       colors: {
         // Define your custom color here
-        'custom-purpel': '#1B3E80',
-        'purpel': '#367CFF',
+        'custom-blue': '#50C2C9',
+        'blue': '#8FD1D7  ',
 
       },
       fontFamily: {
