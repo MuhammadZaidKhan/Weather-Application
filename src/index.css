@@ -1,14 +1,3 @@
-.weather-card {
-  position: absolute;
-  top: 100%;
-  /* Position below the search button */
-  left: 0;
-  width: 100%;
-  /* Occupy full width */
-  /* z-index: 100; */
-  /* Ensure it's above other content */
-}
-
 .border {
   border: solid black;
   border-radius: 40px;

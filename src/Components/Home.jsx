@@ -20,25 +20,28 @@ const Home = () => {
 
     return (
         <div className='bg-black min-h-screen flex flex-col justify-center items-center'>
-            <div className='text-white justify-items-center mb-48 fixed'>
-                <h1 className='font-semibold text-5xl font-Inter'>Weather App</h1>
+            <div className='justify-items-center mb-48 fixed'>
+                <h1 className='font-semibold text-5xl font-Inter text-white'>Weather App</h1>
                 <form onSubmit={submitHandler} className='flex flex-col items-center'>
                     <input
-                        className='bg-white mt-8 w-9/12 h-8 text-black placeholder-black font-bold text-center'
+                        className='bg-white mt-8 h-12 md:w-9/12 md:h-8 placeholder-black text-xl font-bold text-center'
                         placeholder='Your City'
                         type="text"
                         value={cityName}
                         onChange={(e) => setCityName(e.target.value)}
                     />
-                    <button type='submit' className='bg-custom-blue text-white mt-3 h-10 w-32'>Search</button>
+
+
+
+                    <button type='submit' className='bg-custom-blue hover:bg-blue text-white mt-3 h-12 w-32 md:h-10 md:w-32'>Search</button>
                 </form>
             </div>
 
-            <div className='mt-10'>
+            <div className='mt-10 text-black'>
                 {error && <p>{error}</p>}
                 {currentWeather && (
                     <WeatherCard
-                        cityName={cityName} // Correctly passing cityName as prop
+                        cityName={cityName}
                         temp={currentWeather.main.temp}
                     />
                 )}
